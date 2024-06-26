@@ -10,7 +10,7 @@
             <p class="text-base font-medium truncate">Nama: {{ $symptom->name }}</p>
         </div>
         <div class="mt-4">
-            <p class="text-base font-medium truncate">Question: {{ $symptom->question }}?</p>
+            <p class="text-base font-medium truncate">Question: {{ $symptom->question }}</p>
         </div>
         <div class="mt-10">
             <a class="button bg-theme-1 text-white" href="{{ route('symptoms.index') }}">Back</a>
