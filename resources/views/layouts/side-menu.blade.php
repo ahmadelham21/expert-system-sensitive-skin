@@ -29,6 +29,13 @@
         </li>
 
         <li class="side-nav__devider my-6"></li>
+        <li>
+            <a href="{{route('rules.index')}}"
+                class="side-menu {{ request()->routeIs('rules.*') ? 'side-menu--active' : '' }}">
+                <div class="side-menu__icon"> <i data-feather="layers"></i> </div>
+                <div class="side-menu__title"> Diagnosa </div>
+            </a>
+        </li>
 
 
     </ul>
