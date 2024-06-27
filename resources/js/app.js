@@ -31,3 +31,12 @@ document
 
 // Initialize Feather icons
 feather.replace();
+
+function confirmDelete(ruleId) {
+    if (confirm("Are you sure you want to delete this record?")) {
+        // Submit the form
+        document.getElementById("delete-form-" + ruleId).submit();
+    } else {
+        // Do nothing or handle the cancel action
+    }
+}
