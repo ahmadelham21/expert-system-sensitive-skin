@@ -5,6 +5,9 @@
 <head>
     <meta charset="utf-8">
     <link href="{{ asset('dist/images/logo.svg') }}" rel="shortcut icon">
+  
+    
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -19,6 +22,7 @@
 <!-- END: Head -->
 
 <body class="app">
+    
     @include('layouts.mobile-menu')
     <div class="flex">
         @include('layouts.side-menu')
