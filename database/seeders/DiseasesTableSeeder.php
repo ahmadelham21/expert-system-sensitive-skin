@@ -30,7 +30,7 @@ class DiseasesTableSeeder extends Seeder
             ],
             [
                 'code' => 'P04',
-                'name' => 'Kulit wajah dehidrasi',
+                'name' => 'Dehidrasi kulit',
                 'description' => 'Kulit dehidrasi merupakan kondisi di mana kulit tidak mendapatkan asupan cairan yang cukup. Penyebabnya bisa bermacam-macam, mulai dari kurang minum, gaya hidup yang tidak sehat, hingga pengaruh dari lingkungan sekitar. Salah satu ciri kulit dehidrasi yang paling umum adalah kulit terasa tertarik seusai mandi.',
                 'solution' => 'Karena kulit dehidrasi tidak cukup mendapatkan asupan cairan yang cukup oleh sebab itu, penuhi kebutuhan cairan dengan minum air putih 1,5 hingga 2 liter per harinya. Gunakan sabun wajah yang berbahan ringan dan lembut, pastikan sabun tidak mengandung alkohol serta pewangi agar mengurangi rasa tertarik saat mencuci wajah. Selalu gunakan pelembab wajah 2 kali sehari dan gunakan sunscreen sebelum melakukan aktivitas outdoor minimal spf 30.'
             ]

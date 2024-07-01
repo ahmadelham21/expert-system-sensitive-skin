@@ -14,10 +14,10 @@
         </div>
         @endif
         <form action="{{ route('rules.create') }}" method="GET" style="display:inline;">
-            <button class="button mr-1 bg-theme-1 text-white" type="submit">Tambah data</button>
+            <button class="button mr-1 mb-2 bg-theme-1 text-white" type="submit">Tambah data</button>
         </form>
         <div class="overflow-x-auto">
-            <table class="table mt-4">
+            <table class="table ">
                 <thead>
                     <tr>
                         <th class="border border-b-2 whitespace-no-wrap">No</th>

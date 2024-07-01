@@ -6,7 +6,7 @@
 
 <div class="content">
     <div class="overflow-x-auto mt-10">
-        <h1 class="text-lg mb-10">Disease</h1>
+        <h1 class="text-lg mb-10">Penyakit</h1>
         @if ($message = Session::get('success'))
         <div id="alert-message" class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-9 text-white">
             <i data-feather="alert-circle" class="w-6 h-6 mr-2"></i>
