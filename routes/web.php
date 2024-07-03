@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Rute yang tidak dilindungi oleh middleware 'auth'
-Route::get('/expert-system', function () {
+Route::get('/', function () {
     return view('expert-system.index1');
 })->name('expert-system.index');
 
@@ -45,7 +45,6 @@ Route::post('/expert-system/diagnose', [ExpertSystemController::class, 'diagnose
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
-
     Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
     Route::post('/register', [AuthController::class, 'register']);
 });
