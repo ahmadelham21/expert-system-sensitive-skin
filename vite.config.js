@@ -14,4 +14,12 @@ export default defineConfig({
             "@": path.resolve(__dirname, "resources/js"),
         },
     },
+
+    // Asset public directory in Laravel
+    base: "/public/",
+
+    // Laravel Mix compatible output directory
+    build: {
+        outDir: "../public/dist",
+    },
 });

@@ -1,5 +1,15 @@
 /* resources/css/app.css */
 /* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 
-@import '../../public/dist/css/app.css';
+@import "../../public/dist/css/app.css";
 
+.my-img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    object-position: 100% 0px;
+}
+
+.paragraph{
+    width: 450px;
+}

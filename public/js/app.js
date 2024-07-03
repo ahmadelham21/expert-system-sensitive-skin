@@ -1,7 +1,8 @@
 import "./bootstrap";
 
 import "bootstrap";
-import "dist/js/app.js";
+import "../dist/js/app.js";
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var closeButton = document.getElementById("alert-close");

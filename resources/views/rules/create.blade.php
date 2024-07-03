@@ -16,7 +16,7 @@
                     <div class="m-4">
                         <label for="conditions">Conditions</label>
                         <select name="conditions[]" id="conditions" data-placeholder="pilih gejala"
-                            class="select2 w-full" multiple>
+                            class="select2 w-full" multiple required>
                             @foreach ($symptoms as $symptom)
                             <option value="{{ $symptom->code }}"> [{{$symptom->code}}] {{ $symptom->name }}</option>
                             @endforeach
