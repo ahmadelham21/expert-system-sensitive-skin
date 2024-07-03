@@ -44,5 +44,19 @@
         </li>
 
 
+        @auth
+        <li>
+            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                class="side-menu">
+                <div class="side-menu__icon"><i data-feather="log-out"></i></div>
+                <div class="side-menu__title">Logout</div>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </li>
+        @endauth
+
+
     </ul>
 </nav>
