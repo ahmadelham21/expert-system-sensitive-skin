@@ -28,9 +28,14 @@
                     bahan
                     kimia. </p>
                 <div class="container my-10">
-                    <a href="{{route('expert-system.questions')}}"
-                        class="button w-24 mr-1 mb-2 bg-theme-1 text-white">Mulai
-                        diagnosa</a>
+                    <div class="row">
+
+                        <a href="{{route('expert-system.questions')}}"
+                            class="button w-24 mr-1 mb-2 bg-theme-1 text-white">Mulai
+                            diagnosa</a>
+                        <a href="{{route('login')}}" class="button w-24 mr-1 mb-2 bg-theme-1 text-white">
+                            Login Admin</a>
+                    </div>
                 </div>
             </div>
         </div>
