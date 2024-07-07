@@ -56,10 +56,12 @@
                         <button type="submit" class="button button--lg w-full text-white bg-theme-1">Login</button>
                     </div>
                 </form>
-                <div class="mt-5 text-center">
-                    <a href="{{ route('register') }}" class="button button--lg w-96 text-white bg-theme-1">Sign
-                        up</a>
-                </div>
+                <form method="GET" action="{{ route('register') }}">
+                    @csrf
+                    <div class="mt-5 text-center w-full">
+                        <button type="submit" class="button button--lg w-full border text-gray-700">Sign up</button>
+                    </div>
+                </form>
                 <div class="mt-10 text-gray-700 text-center">
                     By signing up, you agree to our
                     <br>
