@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -13,7 +12,6 @@ class DiseaseController extends Controller
         return view('disease.index', compact('disease'));
     }
 
-    
     public function create()
     {
         return view('disease.create');
@@ -25,10 +23,18 @@ class DiseaseController extends Controller
             'code' => 'required|string|max:10',
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'solution' => 'required|string', // Menambahkan validasi untuk kolom solution
+            'solution' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi gambar
         ]);
 
-        Disease::create($request->all());
+        $data = $request->only(['code', 'name', 'description', 'solution']);
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+            $data['image'] = $imagePath;
+        }
+
+        Disease::create($data);
 
         return redirect()->route('disease.index')
                          ->with('success', 'Disease created successfully.');
@@ -38,7 +44,6 @@ class DiseaseController extends Controller
     {
         return view('disease.show', compact('disease'));
     }
-
 
     public function edit(Disease $disease)
     {
@@ -51,10 +56,23 @@ class DiseaseController extends Controller
             'code' => 'required|string|max:10',
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'solution' => 'required|string', // Menambahkan validasi untuk kolom solution
+            'solution' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi gambar
         ]);
 
-        $disease->update($request->all());
+        $data = $request->only(['code', 'name', 'description', 'solution']);
+
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($disease->image) {
+                \Storage::disk('public')->delete($disease->image);
+            }
+
+            $imagePath = $request->file('image')->store('images', 'public');
+            $data['image'] = $imagePath;
+        }
+
+        $disease->update($data);
 
         return redirect()->route('disease.index')
                          ->with('success', 'Disease updated successfully.');
@@ -62,6 +80,11 @@ class DiseaseController extends Controller
 
     public function destroy(Disease $disease)
     {
+        // Hapus gambar jika ada
+        if ($disease->image) {
+            \Storage::disk('public')->delete($disease->image);
+        }
+
         $disease->delete();
 
         return redirect()->route('disease.index')

@@ -18,6 +18,12 @@
         <div class="mt-4">
             <p class="text-base font-medium">Solution: {{ $disease->solution }}</p>
         </div>
+        @if($disease->image)
+        <div class="mt-4">
+            <p class="text-base font-medium">Image:</p>
+            <img src="{{ asset('storage/' . $disease->image) }}" alt="{{ $disease->name }}" class="mt-2 w-56 h-auto">
+        </div>
+        @endif
         <div class="mt-10">
             <a class="button bg-theme-1 text-white" href="{{ route('disease.index') }}">Back</a>
         </div>

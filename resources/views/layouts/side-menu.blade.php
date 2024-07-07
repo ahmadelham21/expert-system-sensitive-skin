@@ -35,13 +35,13 @@
         </li>
 
         <li class="side-nav__devider my-6"></li>
-        <li>
+        <!-- <li>
             <a href="{{route('diagnoses.index')}}"
                 class="side-menu {{ request()->routeIs('diagnoses.*') ? 'side-menu--active' : '' }}">
                 <div class="side-menu__icon"> <i data-feather="layers"></i> </div>
                 <div class="side-menu__title"> Diagnosa </div>
             </a>
-        </li>
+        </li> -->
 
 
         @auth

@@ -32,11 +32,14 @@ Route::middleware(['auth'])->group(function () {
 
 // Rute yang tidak dilindungi oleh middleware 'auth'
 Route::get('/', function () {
-    return view('expert-system.index1');
+    return view('expert-system.index');
 })->name('expert-system.index');
 
 Route::get('/expert-system/questions', [ExpertSystemController::class, 'index'])
     ->name('expert-system.questions');
+    Route::get('/about-us', function () {
+        return view('expert-system/about-us');
+    })->name('expert-system.about-us');
 
 Route::post('/expert-system/diagnose', [ExpertSystemController::class, 'diagnose'])
     ->name('expert-system.diagnose');

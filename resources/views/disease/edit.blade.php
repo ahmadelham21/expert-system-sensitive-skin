@@ -8,7 +8,7 @@
 
         <h1 class="text-lg font-medium truncate">Edit Disease</h1>
 
-        <form action="{{ route('disease.update', $disease->id) }}" method="POST">
+        <form action="{{ route('disease.update', $disease->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -32,8 +32,18 @@
                 <textarea name="solution" class="input border mt-2 w-full" placeholder="masukkan solusi penyakit"
                     minlength="2" required>{{ $disease->solution }}</textarea>
             </div>
+            <div class="m-4">
+                <label class="flex flex-col sm:flex-row"> Image :</label>
+                <input type="file" name="image" class="input border mt-2 w-full">
+                @if($disease->image)
+                <div class="mt-4">
+                    <p class="text-base font-medium">Current Image:</p>
+                    <img src="{{ asset('storage/' . $disease->image) }}" alt="{{ $disease->name }}"
+                        class="mt-2 max-w-full h-auto">
+                </div>
+                @endif
+            </div>
             <button class="button w-24 m-4 my-5 bg-theme-1 text-white" type="submit">Update</button>
-
         </form>
     </div>
 </div>
