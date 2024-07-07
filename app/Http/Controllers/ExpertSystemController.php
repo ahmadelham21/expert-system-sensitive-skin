@@ -15,6 +15,11 @@ class ExpertSystemController extends Controller
         $symptoms = Symptom::all();
         return view('expert-system.question', compact('symptoms'));
     }
+    public function information()
+    {
+        $diseases = Disease::all();
+        return view('expert-system.info', compact('diseases'));
+    }
 
     public function diagnose(Request $request)
     {
