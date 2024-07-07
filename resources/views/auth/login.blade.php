@@ -12,7 +12,8 @@
     <meta name="author" content="LEFT4CODE">
     <title>Login - Midone - Tailwind HTML Admin Template</title>
     <!-- BEGIN: CSS Assets-->
-    <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}" />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <!-- END: CSS Assets-->
 </head>
 
@@ -23,13 +24,19 @@
             <div class="bg-white px-5 py-8 rounded-md shadow-md w-full max-w-md">
                 <h2 class="text-2xl font-bold text-center mb-6">Sign In</h2>
 
-                @if(session('error'))
-                <div class="text-red-500 text-center mb-4">
-                    {{ session('error') }}
+
+                @if ($errors->any())
+                <div id="alert-message" class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-6 text-white">
+
+                    @foreach ($errors->all() as $error)
+                    <i data-feather="alert-circle" class="w-6 h-6 mr-2"></i>
+                    {{ $error }}
+                    <i id="alert-close" data-feather="x" class="w-4 h-4 ml-auto cursor-pointer"></i>
+                    @endforeach
                 </div>
                 @endif
-
-                <div class="text-gray-500 text-center mb-6">A few more clicks to sign in to your account. Manage all
+                <div class="text-gray-500 text-center mb-6">A few more clicks to sign in to your account. Manage
+                    all
                     your e-commerce accounts in one place</div>
                 <form method="POST" action="{{ route('login') }}" class="space-y-4">
                     @csrf
@@ -50,7 +57,8 @@
                     </div>
                 </form>
                 <div class="mt-5 text-center">
-                    <a href="{{ route('register') }}" class="button button--lg w-96 text-white bg-theme-1">Sign up</a>
+                    <a href="{{ route('register') }}" class="button button--lg w-96 text-white bg-theme-1">Sign
+                        up</a>
                 </div>
                 <div class="mt-10 text-gray-700 text-center">
                     By signing up, you agree to our
@@ -61,9 +69,7 @@
             </div>
         </div>
     </div>
-    <!-- BEGIN: JS Assets-->
-    <script src="{{ asset('dist/js/app.js') }}"></script>
-    <!-- END: JS Assets-->
+
 </body>
 
 </html>
