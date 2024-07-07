@@ -13,8 +13,8 @@ class DiseasesTableSeeder extends Seeder
             [
                 'code' => 'P01',
                 'name' => 'Iritasi',
-                'description' => 'Iritasi merupakan suatu peradangan atau reaksi menyakitkan terhadap alergi atau kerusakan lapisan sel. Stimulus atau agen yang menyebabkan kondisi iritasi adalah iritan.',
-                'solution' => 'Gunakan pelembab wajah yang mengandung panthenol dan ceramides untuk menenangkan serta memperbaiki kulit yang iritasi dan gunakan krim atau lotion calamine untuk meredakan rasa gatal. Usahakan untuk tidak menggaruk kulit yang teriritasi agar tidak bertambah parah. Pilihlah produk kecantikan yang bebas pewangi,bebas paraben, yang berlabel hipoalergenik dan pilih pembersih wajah yang berbahan lembut dan alami. Selalu gunakan sunscreen setiap hari di pagi dan siang hari dengan minimal SPF 30 agar kulit terlindung dari paparan sinar matahari.',
+                'description' => 'Iritasi merupakan suatu peradangan atau reaksi menyakitkan terhadap alergi atau kerusakan lapisan sel. Penyebabnya bisa karena bahan kimia dalam produk kecantikan tertentu, kandungan yang bersifat iritan, sinar matahari, polusi udara serta debu.',
+                'solution' => 'Gunakan pelembab wajah yang mengandung panthenol dan ceramides untuk menenangkan serta memperbaiki kulit yang iritasi dan gunakan krim atau lotion calamine untuk meredakan rasa gatal. Usahakan untuk tidak menggaruk kulit yang teriritasi agar tidak bertambah parah. Pilihlah produk kecantikan yang bebas pewangi, bebas paraben, yang berlabel hipoalergenik dan pilih pembersih wajah yang berbahan lembut dan alami. Selalu gunakan sunscreen setiap hari di pagi dan siang hari dengan minimal SPF 30 agar kulit terlindung dari paparan sinar matahari.',
                 'image' => 'images/Gambar Iritasi.jpeg'
             ],
             [
@@ -37,8 +37,7 @@ class DiseasesTableSeeder extends Seeder
                 'description' => 'Kulit dehidrasi merupakan kondisi di mana kulit tidak mendapatkan asupan cairan yang cukup. Penyebabnya bisa bermacam-macam, mulai dari kurang minum, gaya hidup yang tidak sehat, hingga pengaruh dari lingkungan sekitar. Salah satu ciri kulit dehidrasi yang paling umum adalah kulit terasa tertarik seusai mandi.',
                 'solution' => 'Karena kulit dehidrasi tidak cukup mendapatkan asupan cairan yang cukup oleh sebab itu, penuhi kebutuhan cairan dengan minum air putih 1,5 hingga 2 liter per harinya. Gunakan sabun wajah yang berbahan ringan dan lembut, pastikan sabun tidak mengandung alkohol serta pewangi agar mengurangi rasa tertarik saat mencuci wajah. Selalu gunakan pelembab wajah 2 kali sehari dan gunakan sunscreen sebelum melakukan aktivitas outdoor minimal spf 30.',
                 'image' => 'images/Gambar dehidrasi kulit.jpeg'
-            
-                ]
+            ]
         ];
 
         foreach ($diseases as $disease) {
