@@ -13,7 +13,7 @@ class ExpertSystemController extends Controller
     public function index()
     {
         $symptoms = Symptom::all();
-        return view('expert-system.index', compact('symptoms'));
+        return view('expert-system.question', compact('symptoms'));
     }
 
     public function diagnose(Request $request)

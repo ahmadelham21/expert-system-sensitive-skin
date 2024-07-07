@@ -1,0 +1,15 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+.bg-main {
+    background-color: #1c3faa;
+}
+
+.btn-primary {
+    background-color: #1c3faa;
+}
+
+.nav-link {
+    font-weight: 400;
+    text-transform: uppercase;
+}

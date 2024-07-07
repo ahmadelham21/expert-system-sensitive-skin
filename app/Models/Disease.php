@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Disease extends Model
 {
     use HasFactory;
-    protected $fillable = ['code','name', 'description','solution'];
+    protected $fillable = ['code','name', 'description','solution','image'];
 
     public function rules()
     {

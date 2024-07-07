@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Symptom;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,6 +19,14 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+        ]);
+
+        $this->call([
+            AdminSeeder::class,
+            DiseasesTableSeeder::class,
+            SymptomsTableSeeder::class,
+            RulesTableSeeder::class,
+            // Daftarkan seeder lain di sini jika ada
         ]);
     }
 }

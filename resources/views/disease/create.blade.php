@@ -8,7 +8,7 @@
 
         <h1 class="text-lg font-medium truncate">Create Disease</h1>
 
-        <form action="{{ route('disease.store') }}" method="POST" class="validate-form">
+        <form action="{{ route('disease.store') }}" method="POST" class="validate-form" enctype="multipart/form-data">
             @csrf
 
             <div class="m-4">
@@ -33,6 +33,11 @@
                 <label class="flex flex-col sm:flex-row"> Solution :</label>
                 <textarea name="solution" class="input w-full border mt-2" placeholder="masukkan solusi penyakit"
                     minlength="2" required>{{ old('solution') }}</textarea>
+            </div>
+
+            <div class="m-4">
+                <label class="flex flex-col sm:flex-row"> Image :</label>
+                <input type="file" name="image" class="input w-full border mt-2">
             </div>
 
             <button class="button w-24 m-4 my-5 bg-theme-1 text-white" type="submit">Submit</button>
