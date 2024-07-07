@@ -27,8 +27,8 @@
                                     class="img-fluid rounded">
                             </div>
                             <div class="col-md-8">
-                                <p>{{ $disease->description }}</p>
-                                <p><strong>Solusi:</strong> {{ $disease->solution }}</p>
+                                <h5>{{ $disease->description }}</h5>
+
 
                             </div>
                         </div>
