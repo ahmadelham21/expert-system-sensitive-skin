@@ -7,13 +7,13 @@
 <div class="content">
     <div class="container">
         <div class="row justify-content-center mt-5">
-            <div class="col-lg-8">
+            <div class="col">
                 <h1 class="text-center mb-4">Selamat Datang</h1>
                 <h4 class="text-center mb-2">Sistem Pakar Diagnosa Penyakit Kulit Wajah Sensitif</h4>
 
-                <div class="row mt-5">
+                <div class="row mt-2 align-items-center">
 
-                    <div class="col-md-6 d-flex align-items-center">
+                    <div class="col-md-6">
                         <div>
                             <h3 class="text-xl font-bold mt-2 mb-3">Kulit Sensitif</h3>
                             <p class="text-lg">
