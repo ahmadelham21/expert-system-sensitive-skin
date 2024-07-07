@@ -29,7 +29,7 @@
                             <div class="mt-4">
                                 <a href="{{ route('expert-system.questions') }}" class="btn btn-primary mb-2">Mulai
                                     Diagnosa</a>
-                                <a href="{{ route('login') }}" class="btn btn-outline-primary mb-2">Login Admin</a>
+                                <!-- <a href="{{ route('login') }}" class="btn btn-outline-primary mb-2">Login Admin</a> -->
                             </div>
                         </div>
                     </div>
