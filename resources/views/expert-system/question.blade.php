@@ -5,10 +5,11 @@
 @section('content')
 <div class="content">
     <form action="{{ route('expert-system.diagnose') }}" method="post">
-        <h1 class="text-3xl font-medium leading-none mt-10 mb-10 mx-20">Expert system</h1>
+        <h1 class="text-3xl font-medium leading-none mt-10 mb-10 mx-20">Formulir Diagnosa Penyakit Kulit Wajah Sensitif
+        </h1>
 
         <div class="mx-16">
-            <h1 class="text-xl font-medium leading-none mt-10 mb-10 m-4">Formulir diagnosa:</h1>
+            <h1 class="text-xl font-medium leading-none mt-10 mb-10 m-4">Data diri:</h1>
             <div class="m-4">
                 <label class="flex flex-col sm:flex-row">Nama:</label>
                 <input type="text" name="name" class="input w-full border mt-2" value="{{ old('name') }}"

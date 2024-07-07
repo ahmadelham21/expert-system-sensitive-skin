@@ -39,7 +39,7 @@
                 <div class="mt-4">
                     <p class="text-base font-medium">Current Image:</p>
                     <img src="{{ asset('storage/' . $disease->image) }}" alt="{{ $disease->name }}"
-                        class="mt-2 max-w-full h-auto">
+                        class="mt-2 w-56 h-auto">
                 </div>
                 @endif
             </div>
