@@ -40,6 +40,12 @@ Route::get('/expert-system/questions', [ExpertSystemController::class, 'index'])
     Route::get('/about-us', function () {
         return view('expert-system/about-us');
     })->name('expert-system.about-us');
+    Route::get('/profile', function () {
+        return view('expert-system/profile');
+    })->name('expert-system.profile');
+    Route::get('/info-penyakit', function () {
+        return view('expert-system/info');
+    })->name('expert-system.info-penyakit');
 
 Route::post('/expert-system/diagnose', [ExpertSystemController::class, 'diagnose'])
     ->name('expert-system.diagnose');

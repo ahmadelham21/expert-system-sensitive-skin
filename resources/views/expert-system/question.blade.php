@@ -51,12 +51,12 @@
             <div class="flex flex-col sm:flex-row mt-2">
                 <div class="flex items-center text-gray-700 mr-2">
                     <input type="radio" class="input border mr-2" id="yes-{{ $symptom->code }}"
-                        name="conditions[{{ $symptom->code }}]" value="yes">
+                        name="conditions[{{ $symptom->code }}]" value="yes" required>
                     <label class="cursor-pointer select-none" for="yes-{{ $symptom->code }}">Ya</label>
                 </div>
                 <div class="flex items-center text-gray-700 mr-2 mt-2 sm:mt-0">
                     <input type="radio" class="input border mr-2" id="no-{{ $symptom->code }}"
-                        name="conditions[{{ $symptom->code }}]" value="no">
+                        name="conditions[{{ $symptom->code }}]" value="no" required>
                     <label class="cursor-pointer select-none" for="no-{{ $symptom->code }}">Tidak</label>
                 </div>
             </div>

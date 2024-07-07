@@ -1,52 +1,45 @@
-@extends('expert-system.layout')
+@extends('expert-system.layout-bootstrap')
 
 @section('title', 'Expert-system')
 
 @section('content')
 <!-- BEGIN: Content -->
 <div class="content">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <h1 class="text-center mb-4">Selamat Datang</h1>
+                <h4 class="text-center mb-2">Sistem Pakar Diagnosa Penyakit Kulit Wajah Sensitif</h4>
 
-    <h1 class="text-4xl font-bold leading-none mt-10 text-center">Selamat Datang</h1>
-    <h1 class="text-xl font-medium leading-none mt-5 text-center">Sistem pakar diagnosa penyakit kulit wajah
-        sensitif
-    </h1>
+                <div class="row mt-5">
 
-    <div class="flex flex-row gap-16 justify-center mt-20">
-        <div class="flex flex-col max-w-24 justify-start">
-            <h1 class="text-xl font-bold leading-none mt-5 ">Kulit sensitif</h1>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <h3 class="text-xl font-bold mt-2 mb-3">Kulit Sensitif</h3>
+                            <p class="text-lg">
+                                Kulit sensitif adalah keadaan di mana kulit memiliki tingkat sensitivitas yang
+                                tinggi
+                                terhadap berbagai faktor seperti udara, bahan kimia, dan perubahan lingkungan. Ini
+                                dapat
+                                menyebabkan reaksi berlebihan seperti iritasi atau peradangan, terutama pada kulit
+                                wajah. Faktor pemicu meliputi perubahan cuaca, stres, perubahan hormon, hewan
+                                peliharaan, debu, dan bahan kimia dalam produk perawatan kulit.
+                            </p>
 
-            <div class="paragraph mt-5">
-
-                <p>Kulit sensitif adalah keadaan kulit yang sering menimbulkan berbagai masalah
-                    terhadap
-                    kulit dan rawan terluka akibat reaksi berlebihan terhadap berbagai faktor, seperti udara atau bahan
-                    kimia dalam produk perawatan kulit. Jenis kulit sensitif memiliki tingkat sensitivitas yang tinggi,
-                    hal
-                    ini disebabkan karena dinding alami kulit mengalami penurunan fungsi sehingga mudah bereaksi saat
-                    ada
-                    faktor pemicu, seperti perubahan cuaca, stres, perubahan hormon, hewan peliharaan, debu, hingga
-                    bahan
-                    kimia. </p>
-                <div class="container my-10">
-                    <div class="row">
-
-                        <a href="{{route('expert-system.questions')}}"
-                            class="button w-24 mr-1 mb-2 bg-theme-1 text-white">Mulai
-                            diagnosa</a>
-                        <a href="{{route('login')}}" class="button w-24 mr-1 mb-2 bg-theme-1 text-white">
-                            Login Admin</a>
+                            <div class="mt-4">
+                                <a href="{{ route('expert-system.questions') }}" class="btn btn-primary mb-2">Mulai
+                                    Diagnosa</a>
+                                <a href="{{ route('login') }}" class="btn btn-outline-primary mb-2">Login Admin</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ asset('/kulit-wajah.jpg') }}" alt="Gambar Kulit Wajah" class="  rounded mt-5">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col">
-
-            <img class="my-img rounded-full" src="{{asset('/kulit-wajah.jpg')}}" alt="gambar kulit">
-        </div>
     </div>
-
-
-
 </div>
 <!-- END: Content -->
 
